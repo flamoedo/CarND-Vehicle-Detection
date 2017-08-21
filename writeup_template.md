@@ -46,17 +46,16 @@ Here is an example using the `YCrCb` color space and HOG parameters of `orientat
 
 I tried various combinations of parameters and, after many tests, I decided to set the parameters as follws:
 
-`color_space = 'YCrCb' # Can be RGB, HSV, LUV, HLS, YUV, YCrCb
-orient = 5  # HOG orientations
-pix_per_cell = 8 # HOG pixels per cell
-cell_per_block = 2 # HOG cells per block
-hog_channel = 'ALL' # Can be 0, 1, 2, or "ALL"
-spatial_size = (32, 32) # Spatial binning dimensions
-hist_bins = 32    # Number of histogram bins
-spatial_feat = True # Spatial features on or off
-hist_feat = True # Histogram features on or off
-hog_feat = True # HOG features on or off
-y_start_stop = [None, None] # Min and max in y to search in slide_window()`
+`- color_space = 'YCrCb' # Can be RGB, HSV, LUV, HLS, YUV, YCrCb
+- orient = 5  # HOG orientations
+- pix_per_cell = 8 # HOG pixels per cell
+- cell_per_block = 2 # HOG cells per block
+- hog_channel = 'ALL' # Can be 0, 1, 2, or "ALL"
+- spatial_size = (32, 32) # Spatial binning dimensions
+- hist_bins = 32    # Number of histogram bins
+- spatial_feat = True # Spatial features on or off
+- hist_feat = True # Histogram features on or off
+- hog_feat = True # HOG features on or off`
 
 
 ####3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
