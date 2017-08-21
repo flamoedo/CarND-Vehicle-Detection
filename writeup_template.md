@@ -46,7 +46,7 @@ Here is an example using the `YCrCb` color space and HOG parameters of `orientat
 
 I tried various combinations of parameters and, after many tests, I decided to set the parameters as follws:
 
-`- color_space = 'YCrCb' # Can be RGB, HSV, LUV, HLS, YUV, YCrCb
+- color_space = 'YCrCb' # Can be RGB, HSV, LUV, HLS, YUV, YCrCb
 - orient = 5  # HOG orientations
 - pix_per_cell = 8 # HOG pixels per cell
 - cell_per_block = 2 # HOG cells per block
@@ -55,7 +55,7 @@ I tried various combinations of parameters and, after many tests, I decided to s
 - hist_bins = 32    # Number of histogram bins
 - spatial_feat = True # Spatial features on or off
 - hist_feat = True # Histogram features on or off
-- hog_feat = True # HOG features on or off`
+- hog_feat = True # HOG features on or off
 
 
 ####3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
@@ -88,7 +88,9 @@ Here's a [link to my video result](./output_images/project_video_output3.mp4)
 
 ####2. Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
 
-I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.  
+I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.
+
+It was need to hold the last 60 frames from the heat map, and calculate the average of the values to stabilize the detection box over the entire video.
 
 Here's an example result showing the heatmap from a series of frames of video, the result of `scipy.ndimage.measurements.label()` and the bounding boxes then overlaid on the last frame of video:
 
