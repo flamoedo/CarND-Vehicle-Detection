@@ -120,3 +120,8 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
 
+The are some problems with the detection, were some times, it canot distinguish the car in some light situations. So it´s need a much bigger image data-base to train the detector.
+
+The other problem I've found was the estabilization of the bounding boxes, that try to wobling arround. I work arround it holding the last seccond of frames (60 frames) and calculate the average.
+
+
