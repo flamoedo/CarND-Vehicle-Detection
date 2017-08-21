@@ -13,7 +13,9 @@ The goals / steps of this project are the following:
 [image1]: ./examples/car_not_car.png
 [image2]: ./examples/HOG_example.jpg
 [image3]: ./examples/sliding_windows.jpg
-[image4]: ./examples/sliding_window.jpg
+[image4]: ./examples/detect1.jpg
+[image41]: ./examples/detect2.jpg
+[image42]: ./examples/detect3.jpg
 [image5]: ./examples/bboxes_and_heat.png
 [image6]: ./examples/example1.png
 [image7]: ./examples/example2.png
@@ -76,6 +78,10 @@ The search area is determinated by the variables `ystart, ystop`, and `scale` de
 Ultimately I searched on one scale using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
 
 ![alt text][image4]
+![alt text][image41]
+![alt text][image42]
+
+
 ---
 
 ### Video Implementation
